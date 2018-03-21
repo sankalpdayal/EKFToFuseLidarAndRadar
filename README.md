@@ -8,7 +8,7 @@ My setup is done using windows with docker installed. The remaining setup was do
 The programs that were be written to accomplish the project are src/FusionEKF.cpp, src/FusionEKF.h, kalman_filter.cpp, kalman_filter.h, tools.cpp, and tools.h
 
 Following changes were done in the files.
-'src/FusionEKF.cpp'
+### '`rc/FusionEKF.cpp`
 1. Finished initializing the FusionEKF by setting up process and measurement noises, laser and radar update matrices.
 2. Converted radar measurements from polar to cartesian coordinates and initialize state.
 3. Initialize state with x, y positions from measurements and velocity as 0 if initialize state is using laser.
@@ -18,12 +18,12 @@ Following changes were done in the files.
 7. If the sensor was laser, update is done as a linear ekf using `ekf_.Update()` and constant H and R matrices are used. 
 8. If the sensor is radar, update H matrix by calcualting jacobina matrix using `tools.CalculateJacobian()` and use as measurement update matrix. Update measurement using using `ekf_.UpdateEKF()`
 
-'src/kalman_filter.cpp'
+### `src/kalman_filter.cpp`
 1. Implemented equations to predict the state. 
 2. Implemented `update()` the state by using Kalman Filter equations for linear update.
 3. Implemented `UpdateEKF()`. First ro, theta and ro dot are obtained using the non linear equations. Then y is obtained and theta in y is normalized between pi and -pi. Then standard Kalman Filter equations are used.
 
-'src/tools.cpp'
+### `src/tools.cpp`
 1. Implemented function to calculate the RMSE
 2. Implemented function to calculate a Jacobian.
 
