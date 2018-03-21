@@ -8,7 +8,7 @@ My setup is done using windows with docker installed. The remaining setup was do
 The programs that were be written to accomplish the project are src/FusionEKF.cpp, src/FusionEKF.h, kalman_filter.cpp, kalman_filter.h, tools.cpp, and tools.h
 
 Following changes were done in the files.
-### '`rc/FusionEKF.cpp`
+### `src/FusionEKF.cpp`
 1. Finished initializing the FusionEKF by setting up process and measurement noises, laser and radar update matrices.
 2. Converted radar measurements from polar to cartesian coordinates and initialize state.
 3. Initialize state with x, y positions from measurements and velocity as 0 if initialize state is using laser.
